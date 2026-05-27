@@ -1,0 +1,3 @@
+accessWidener v1 official
+
+accessible field net/minecraft/client/Minecraft pendingConnection Lnet/minecraft/network/Connection;
