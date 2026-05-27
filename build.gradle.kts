@@ -134,13 +134,13 @@ publishMods {
 
     modrinth {
         accessToken = providers.environmentVariable("MODRINTH_API_KEY")
-        projectId = "12345678"
+        projectId = providers.gradleProperty("example.modrinth.id")
         minecraftVersions.addAll(supportedMinecraftVersions)
         minecraftVersions.add(loom.minecraftVersion)
     }
     curseforge {
         accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
-        projectId = "12345678"
+        projectId = providers.gradleProperty("example.curseforge.id")
         minecraftVersions.add(loom.minecraftVersion)
     }
 
@@ -157,12 +157,12 @@ publishMods {
     }
     val modrinthOptions = modrinthOptions {
         accessToken = providers.environmentVariable("MODRINTH_API_KEY")
-        projectId = "12345678"
+        projectId = providers.gradleProperty("example.modrinth.id")
         minecraftVersions.add(loom.minecraftVersion)
     }
     val curseforgeOptions = curseforgeOptions {
         accessToken = providers.environmentVariable("CURSEFORGE_API_KEY")
-        projectId = "12345678"
+        projectId = providers.gradleProperty("example.curseforge.id")
         minecraftVersions.add(loom.minecraftVersion)
     }
     modrinth("modrinthFabric") {
